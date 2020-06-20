@@ -7,7 +7,8 @@ lazy val `tapir-assembly-npe-minification` =
       Seq(
         scalaVersion := "2.13.2",
         organization := "dev.sommerlatt",
-        scalafmtOnCompile := true
+        scalafmtOnCompile := true,
+        logLevel in assembly := Level.Debug
       )
     )
     .settings(
