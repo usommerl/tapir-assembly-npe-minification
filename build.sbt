@@ -7,8 +7,18 @@ lazy val `tapir-assembly-npe-minification` =
       Seq(
         scalaVersion := "2.13.2",
         organization := "dev.sommerlatt",
-        scalafmtOnCompile := true,
-        logLevel in assembly := Level.Debug
+        scalafmtOnCompile := true
+        // Fix: Use the following merge strategy to include the required file
+
+        /*
+         *assemblyMergeStrategy in assembly := {
+         *  case PathList("META-INF", "maven", "org.webjars", "swagger-ui", "pom.properties") =>
+         *    MergeStrategy.singleOrError
+         *  case x =>
+         *    val oldStrategy = (assemblyMergeStrategy in assembly).value
+         *    oldStrategy(x)
+         *}
+         */
       )
     )
     .settings(
