@@ -15,7 +15,7 @@ Caused by: java.lang.NullPointerException
 
 To avoid this issue, you need to modify the default merge strategy of the assembly task:
 
-```
+```scala
 assemblyMergeStrategy in assembly := {
   case PathList("META-INF", "maven", "org.webjars", "swagger-ui", "pom.properties") =>
     MergeStrategy.singleOrError
