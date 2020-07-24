@@ -1,6 +1,6 @@
 val tapirVersion = "0.15.4"
 
-lazy val `tapir-assembly-npe-minification` =
+lazy val `tapir-assembly-npe-minimisation` =
   project
     .in(file("."))
     .settings(
