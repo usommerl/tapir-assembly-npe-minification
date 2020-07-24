@@ -1,4 +1,4 @@
-# tapir-assembly-npe-minification #
+# tapir-assembly-npe-minimisation #
 
 * The application is working fine if you start it via `sbt run`
 * Create a fat jar via the `sbt assembly` task
